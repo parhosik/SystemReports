@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="manifestLetterReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d9fe459f-7aeb-4c2b-9fd1-1793b003c6b1">
+	<subDataset name="Dataset1" uuid="12644c97-a1fb-4ada-910c-514d6464db67">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="reportTitle" class="java.lang.String"/>
+	<parameter name="logopath" class="java.lang.String"/>
+	<parameter name="order" class="com.logistics.entities.orderManagement.Orders"/>
+	<parameter name="footerlogopath" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame" isUsingCache="true">
+				<reportElement x="0" y="0" width="555" height="79" uuid="e6815b56-e282-4140-abe7-dda588b542ea"/>
+				<imageExpression><![CDATA[$P{logopath}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="34">
+			<textField>
+				<reportElement x="360" y="0" width="195" height="30" uuid="2f4ae766-92a7-49b6-8407-96f6b295ab63"/>
+				<textElement textAlignment="Right">
+					<font size="15" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reportTitle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="600" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="0" y="0" width="260" height="120" uuid="526da4a9-a675-4fea-8628-a39925c248c8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="2" y="2" width="178" height="19" uuid="9d1e9fc7-6007-456e-a77c-6e1335017ff7"/>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Shipper:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="0" y="21" width="260" height="19" uuid="37d5f4f6-3368-4dd3-98e3-db3493ee1058"/>
+					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentShipper().getFullName()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="260" y="0" width="295" height="120" uuid="36ff047b-fc25-4f81-aff6-111d9315de18"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="2" y="6" width="58" height="19" uuid="748130a5-4f46-4842-be5c-a9dcf50af2bb"/>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Ref No.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="34" width="58" height="19" uuid="77e1e72a-87a6-46dc-bf2f-bf608a130166"/>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[HBL / MBL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="63" width="58" height="19" uuid="769ea525-d200-47c9-bb0e-0c6aa88a338e"/>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[POL]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="92" width="58" height="19" uuid="5378dda9-eb85-4a98-ac18-aced65626be3"/>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[POD]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="60" y="6" width="9" height="19" uuid="baf8e54d-bfac-4d90-9a0a-2e19472acb4f"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="60" y="33" width="9" height="19" uuid="4b294e08-fc17-47ff-8e1e-78b3441b4b2b"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="60" y="62" width="9" height="19" uuid="3960fe56-cc2d-42ea-a30b-f6ec77bd3bd0"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="60" y="91" width="9" height="19" uuid="a680ec7d-ae81-4d17-af31-d04a9d85b2db"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="165" y="5" width="35" height="19" uuid="03a90b9f-8b18-422d-a07e-083be33b563f"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Date :]]></text>
+				</staticText>
+				<textField pattern="MMMMM dd, yyyy">
+					<reportElement x="201" y="7" width="88" height="18" uuid="b077bd9f-30c3-489b-8153-e74e7f3e6275"/>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="167" y="64" width="35" height="18" uuid="bf4e7cf4-9e3a-4bf4-b3e0-3b847b3fac2a"/>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ETA :]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="0" y="120" width="260" height="120" uuid="3a392a9d-d2e8-49bd-8b77-bb2fbf475178">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="2" y="2" width="178" height="19" uuid="f44246b9-b197-42de-a4e0-7230379d02fb"/>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Consignee:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="260" y="120" width="295" height="120" uuid="c0e96551-fe0d-4160-890e-cbbba8fa7c2c"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="1" width="275" height="29" uuid="ff2b4452-7036-4752-adea-92ddb140ec46"/>
+					<staticText>
+						<reportElement x="2" y="6" width="88" height="19" uuid="2fee8015-7b9a-4bde-8c4d-3226f07ccd0d"/>
+						<textElement>
+							<font size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Vessel / Voyage :]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="0" y="31" width="275" height="29" uuid="4e8dc974-aea2-4634-8e7f-ff30d46e4338"/>
+					<staticText>
+						<reportElement x="2" y="6" width="88" height="19" uuid="9b09323d-6ea5-45e0-a5fc-b219006462e7"/>
+						<textElement>
+							<font size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Feeder Vessel :]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="0" y="61" width="275" height="29" uuid="19ba8130-31a9-4743-860f-587d69048bc5"/>
+					<staticText>
+						<reportElement x="2" y="6" width="88" height="19" uuid="3243c087-7df9-4f3e-ac3a-e04abcdcf8db"/>
+						<textElement>
+							<font size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Container No.]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="0" y="91" width="275" height="29" uuid="931d0b64-1e5e-452e-9788-638004ae4227"/>
+					<staticText>
+						<reportElement x="2" y="6" width="88" height="19" uuid="080ff15b-59b8-4d72-8e7b-02410f0780e8"/>
+						<textElement>
+							<font size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Seal No.]]></text>
+					</staticText>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement x="0" y="240" width="260" height="120" uuid="8e6395aa-fb63-4a65-8faf-915d17f31f20">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="2" y="2" width="178" height="19" uuid="eec77d9a-258c-4042-b446-16165c749c98"/>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Notify Party:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="260" y="240" width="295" height="120" uuid="1ad70402-5637-4f0d-9a11-866a2f1ec874"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="91" width="275" height="29" uuid="ee965eff-c354-4d0e-a18a-1f66e0948ebc"/>
+					<staticText>
+						<reportElement x="2" y="6" width="67" height="19" uuid="cdd5bee4-62ee-46a8-952f-4b6ec148f56f"/>
+						<textElement>
+							<font size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[G/Weight:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="150" y="6" width="50" height="19" uuid="f3838f59-6031-4126-9d9d-a36d758289ce"/>
+						<textElement textAlignment="Right">
+							<font size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[CBM:]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="0" y="61" width="275" height="29" uuid="2b060e6b-7430-4530-8700-a3074a33cdfa"/>
+					<staticText>
+						<reportElement x="2" y="6" width="67" height="19" uuid="658da326-d0d2-4b0c-b9c8-faf0cc7b85fb"/>
+						<textElement>
+							<font size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Volume:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="150" y="6" width="50" height="19" uuid="4273cfa8-e874-47fa-a087-84c858fdd0ad"/>
+						<textElement>
+							<font size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Packages:]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="0" y="1" width="275" height="60" uuid="4a6ff819-36d4-40d0-aef5-a4ec5cc97fd2"/>
+					<staticText>
+						<reportElement x="2" y="6" width="88" height="19" uuid="a90ec177-9bca-4691-aaa4-8a1d8ac48586"/>
+						<textElement>
+							<font size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Description :]]></text>
+					</staticText>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement x="0" y="360" width="260" height="120" uuid="4ef8af38-5b55-4d09-a55c-047778ba3b9a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="2" y="2" width="258" height="19" uuid="036f9dfa-ab2f-4e8e-8c4a-37d700b1a29a"/>
+					<textElement>
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[For Related Inquiries please contact:]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="260" y="360" width="295" height="120" uuid="13a122bd-267d-4305-82d4-8bbd28a8c289"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement x="0" y="480" width="260" height="120" uuid="a719fb71-1eaf-4fc5-ba2a-11c7c22b9319">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="2" y="2" width="258" height="19" uuid="98282042-394f-4c91-ad46-51b96089ac1b"/>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+					<text><![CDATA[**************************]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="260" y="480" width="295" height="120" uuid="2c818e6f-1049-47e5-b14d-fd2a8ff68300"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="70">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="555" height="70" uuid="ee93370c-2784-45ca-920d-f758f29a874c"/>
+				<imageExpression><![CDATA[$P{footerlogopath}]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>
