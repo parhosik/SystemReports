@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
 encoding/arrivalNoticeReport.jrxml=UTF-8
+encoding/doLetterReport.jrxml=UTF-8
+encoding/invoiceReport.jrxml=UTF-8
 encoding/manifestLetterReport.jrxml=UTF-8
+encoding/paymentReceiptReport.jrxml=UTF-8
