@@ -301,7 +301,7 @@ Thanking You,]]></text>
 			</textField>
 			<textField>
 				<reportElement x="220" y="80" width="80" height="20" uuid="3ab4befe-0f37-4bcc-b31b-3e400487143e"/>
-				<textFieldExpression><![CDATA["KGs"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getWeightUnit()]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="230" y="100" width="70" height="20" uuid="64fe4d80-9912-4df9-92ab-2ec16555a249"/>
