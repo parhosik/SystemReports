@@ -32,7 +32,7 @@
 			<textField>
 				<reportElement x="360" y="0" width="195" height="30" uuid="2f4ae766-92a7-49b6-8407-96f6b295ab63"/>
 				<textElement textAlignment="Right">
-					<font size="15" isBold="true" isItalic="true" isUnderline="true"/>
+					<font size="10" isBold="false" isItalic="true" isUnderline="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{reportTitle}]]></textFieldExpression>
 			</textField>
@@ -42,7 +42,7 @@
 		<band height="600" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<frame>
-				<reportElement x="0" y="0" width="260" height="120" uuid="526da4a9-a675-4fea-8628-a39925c248c8">
+				<reportElement x="0" y="0" width="260" height="110" uuid="526da4a9-a675-4fea-8628-a39925c248c8">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -54,27 +54,27 @@
 				<staticText>
 					<reportElement x="3" y="2" width="178" height="19" uuid="9d1e9fc7-6007-456e-a77c-6e1335017ff7"/>
 					<textElement>
-						<font size="10" isBold="true"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<text><![CDATA[Shipper:]]></text>
 				</staticText>
 				<textField>
 					<reportElement x="1" y="21" width="250" height="32" uuid="37d5f4f6-3368-4dd3-98e3-db3493ee1058"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentShipper().getFullName()]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="3" y="53" width="250" height="32" uuid="1abfb39e-523b-442e-a07a-5fea0ee10cd2"/>
+					<reportElement x="3" y="53" width="257" height="57" uuid="1abfb39e-523b-442e-a07a-5fea0ee10cd2"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentShipper().getCustomerAddress().getAddress()]]></textFieldExpression>
 				</textField>
 			</frame>
 			<frame>
-				<reportElement x="260" y="0" width="295" height="120" uuid="36ff047b-fc25-4f81-aff6-111d9315de18">
+				<reportElement x="260" y="0" width="295" height="110" uuid="36ff047b-fc25-4f81-aff6-111d9315de18">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -83,144 +83,58 @@
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<staticText>
-					<reportElement x="2" y="2" width="58" height="16" uuid="748130a5-4f46-4842-be5c-a9dcf50af2bb">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="10" isBold="true"/>
-					</textElement>
-					<text><![CDATA[Ref No.]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="2" y="34" width="58" height="16" uuid="77e1e72a-87a6-46dc-bf2f-bf608a130166"/>
-					<textElement>
-						<font size="10" isBold="true"/>
-					</textElement>
-					<text><![CDATA[HBL / MBL]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="2" y="62" width="28" height="16" uuid="769ea525-d200-47c9-bb0e-0c6aa88a338e">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="10" isBold="true"/>
-					</textElement>
-					<text><![CDATA[POL]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="2" y="92" width="28" height="16" uuid="5378dda9-eb85-4a98-ac18-aced65626be3">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="10" isBold="true"/>
-					</textElement>
-					<text><![CDATA[POD]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="60" y="1" width="9" height="16" uuid="baf8e54d-bfac-4d90-9a0a-2e19472acb4f"/>
-					<textElement>
-						<font size="12" isBold="true"/>
-					</textElement>
-					<text><![CDATA[:]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="60" y="32" width="9" height="16" uuid="4b294e08-fc17-47ff-8e1e-78b3441b4b2b"/>
-					<textElement>
-						<font size="12" isBold="true"/>
-					</textElement>
-					<text><![CDATA[:]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="30" y="60" width="9" height="16" uuid="3960fe56-cc2d-42ea-a30b-f6ec77bd3bd0">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="12" isBold="true"/>
-					</textElement>
-					<text><![CDATA[:]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="30" y="90" width="9" height="16" uuid="a680ec7d-ae81-4d17-af31-d04a9d85b2db">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="12" isBold="true"/>
-					</textElement>
-					<text><![CDATA[:]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="169" y="2" width="35" height="19" uuid="03a90b9f-8b18-422d-a07e-083be33b563f"/>
-					<textElement>
-						<font size="12" isBold="true"/>
-					</textElement>
-					<text><![CDATA[Date :]]></text>
-				</staticText>
 				<textField pattern="MMMMM dd, yyyy">
-					<reportElement x="204" y="3" width="88" height="18" uuid="b077bd9f-30c3-489b-8153-e74e7f3e6275"/>
-					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement x="167" y="64" width="35" height="16" uuid="bf4e7cf4-9e3a-4bf4-b3e0-3b847b3fac2a">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</reportElement>
+					<reportElement x="170" y="3" width="125" height="18" uuid="b077bd9f-30c3-489b-8153-e74e7f3e6275"/>
 					<textElement>
-						<font size="10" isBold="true"/>
+						<font size="10" isBold="false"/>
 					</textElement>
-					<text><![CDATA[ETA :]]></text>
-				</staticText>
-				<textField>
-					<reportElement x="69" y="4" width="100" height="16" uuid="8477464b-4365-48b8-baa6-73a2963d4ec7"/>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$P{order}.getJobNumber()]]></textFieldExpression>
+					<textFieldExpression><![CDATA["Date : " + new SimpleDateFormat("dd-MM-yyyy HH:mm").format( new java.util.Date() )]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="69" y="35" width="69" height="16" uuid="b38b834e-9ab9-4a64-a193-de9123a13e70"/>
+					<reportElement x="3" y="4" width="166" height="16" uuid="8477464b-4365-48b8-baa6-73a2963d4ec7"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getHblNumber()]]></textFieldExpression>
+					<textFieldExpression><![CDATA["Ref No : " + $P{order}.getJobNumber()]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="147" y="35" width="79" height="16" uuid="83361cfd-54a6-4ac3-90fd-798f26e33a63"/>
+					<reportElement x="3" y="21" width="292" height="16" uuid="b38b834e-9ab9-4a64-a193-de9123a13e70"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getMblNumber()]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement x="138" y="35" width="9" height="16" uuid="460f92e6-a074-40f1-9624-07d1fca75cd5"/>
-					<textElement>
-						<font size="8" isBold="true"/>
-					</textElement>
-					<text><![CDATA[/]]></text>
-				</staticText>
-				<textField>
-					<reportElement x="39" y="63" width="128" height="16" uuid="5e586555-eb03-41f4-a9e6-37d855591cc6"/>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$P{order}.getOrderAddress().getPortOfLoading().getCustomerAddress().getAddress()]]></textFieldExpression>
+					<textFieldExpression><![CDATA["HBL / MBL Number: " + $P{order}.getOrderDetails().getHblNumber() + " / " + $P{order}.getOrderDetails().getMblNumber()]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="39" y="93" width="128" height="16" uuid="74cdd034-9804-4a69-895c-7409f80ebe94"/>
+					<reportElement x="3" y="53" width="292" height="16" uuid="5e586555-eb03-41f4-a9e6-37d855591cc6"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$P{order}.getOrderAddress().getPortOfDischarge().getCustomerAddress().getAddress()]]></textFieldExpression>
+					<textFieldExpression><![CDATA["POL : " + $P{order}.getOrderAddress().getPortOfLoading().getPortName() + " / " + $P{order}.getOrderAddress().getPortOfLoading().getCustomerAddress().getAddress()]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="205" y="65" width="79" height="16" uuid="4bb83dd4-ba1d-47d1-96e5-37765f41a6e6"/>
+					<reportElement x="3" y="69" width="292" height="16" uuid="74cdd034-9804-4a69-895c-7409f80ebe94"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getEta()]]></textFieldExpression>
+					<textFieldExpression><![CDATA["POD : " + $P{order}.getOrderAddress().getPortOfDischarge().getPortName() + " / " + $P{order}.getOrderAddress().getPortOfDischarge().getCustomerAddress().getAddress()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="3" y="37" width="292" height="16" uuid="4bb83dd4-ba1d-47d1-96e5-37765f41a6e6"/>
+					<textElement>
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["ETA : " + $P{order}.getOrderDetails().getEta()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="3" y="85" width="292" height="25" uuid="4001dcb1-046b-4434-bc63-db6923ca4463"/>
+					<textElement>
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Vessel / Voyage: " + $P{order}.getOrderDetails().getVessel()]]></textFieldExpression>
 				</textField>
 			</frame>
 			<frame>
-				<reportElement x="0" y="120" width="260" height="120" uuid="3a392a9d-d2e8-49bd-8b77-bb2fbf475178">
+				<reportElement x="0" y="110" width="260" height="130" uuid="3a392a9d-d2e8-49bd-8b77-bb2fbf475178">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -232,52 +146,24 @@
 				<staticText>
 					<reportElement x="3" y="2" width="178" height="19" uuid="f44246b9-b197-42de-a4e0-7230379d02fb"/>
 					<textElement>
-						<font size="10" isBold="true"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<text><![CDATA[Consignee:]]></text>
 				</staticText>
 				<textField>
 					<reportElement x="3" y="53" width="250" height="32" uuid="9d52e9a0-5847-4645-b230-47f6d398df36"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentConsignee().getCustomerAddress().getAddress()]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="3" y="21" width="250" height="32" uuid="bb1f7acd-117b-44bb-af4a-eeabb80136cc"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentConsignee().getFullName()]]></textFieldExpression>
 				</textField>
-			</frame>
-			<frame>
-				<reportElement x="260" y="120" width="295" height="120" uuid="c0e96551-fe0d-4160-890e-cbbba8fa7c2c"/>
-				<box>
-					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<frame>
-					<reportElement x="0" y="1" width="295" height="60" uuid="ff2b4452-7036-4752-adea-92ddb140ec46"/>
-					<staticText>
-						<reportElement x="2" y="1" width="88" height="16" uuid="2fee8015-7b9a-4bde-8c4d-3226f07ccd0d">
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						</reportElement>
-						<textElement>
-							<font size="10" isBold="true"/>
-						</textElement>
-						<text><![CDATA[Vessel / Voyage :]]></text>
-					</staticText>
-					<textField>
-						<reportElement x="2" y="20" width="293" height="40" uuid="e055231d-9b61-4a8d-967d-75b220fbfd1e"/>
-						<textElement>
-							<font size="8"/>
-						</textElement>
-						<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getVessel()]]></textFieldExpression>
-					</textField>
-				</frame>
 			</frame>
 			<frame>
 				<reportElement x="0" y="240" width="260" height="120" uuid="8e6395aa-fb63-4a65-8faf-915d17f31f20">
@@ -292,21 +178,21 @@
 				<staticText>
 					<reportElement x="3" y="2" width="178" height="19" uuid="eec77d9a-258c-4042-b446-16165c749c98"/>
 					<textElement>
-						<font size="10" isBold="true"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<text><![CDATA[Notify Party:]]></text>
 				</staticText>
 				<textField>
 					<reportElement x="3" y="53" width="250" height="32" uuid="05b214e5-1be6-4559-996a-da67dc064d78"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentNotifyParty().getCustomerAddress().getAddress()]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="3" y="21" width="250" height="32" uuid="936cc8e7-fef7-48f3-9872-5db8fda1656f"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentNotifyParty().getFullName()]]></textFieldExpression>
 				</textField>
@@ -321,45 +207,9 @@
 				</box>
 				<frame>
 					<reportElement x="0" y="91" width="295" height="29" uuid="ee965eff-c354-4d0e-a18a-1f66e0948ebc"/>
-					<staticText>
-						<reportElement x="2" y="6" width="48" height="16" uuid="cdd5bee4-62ee-46a8-952f-4b6ec148f56f">
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						</reportElement>
-						<textElement>
-							<font size="10" isBold="true"/>
-						</textElement>
-						<text><![CDATA[G/Weight:]]></text>
-					</staticText>
-					<staticText>
-						<reportElement x="150" y="6" width="50" height="16" uuid="f3838f59-6031-4126-9d9d-a36d758289ce">
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						</reportElement>
-						<textElement textAlignment="Right">
-							<font size="10" isBold="true"/>
-						</textElement>
-						<text><![CDATA[CBM:]]></text>
-					</staticText>
 				</frame>
 				<frame>
 					<reportElement x="0" y="61" width="295" height="29" uuid="2b060e6b-7430-4530-8700-a3074a33cdfa"/>
-					<staticText>
-						<reportElement x="2" y="6" width="48" height="16" uuid="658da326-d0d2-4b0c-b9c8-faf0cc7b85fb">
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						</reportElement>
-						<textElement>
-							<font size="10" isBold="true"/>
-						</textElement>
-						<text><![CDATA[Volume:]]></text>
-					</staticText>
-					<staticText>
-						<reportElement x="152" y="6" width="50" height="16" uuid="4273cfa8-e874-47fa-a087-84c858fdd0ad">
-							<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						</reportElement>
-						<textElement>
-							<font size="10" isBold="true"/>
-						</textElement>
-						<text><![CDATA[Packages:]]></text>
-					</staticText>
 				</frame>
 				<frame>
 					<reportElement x="0" y="1" width="295" height="60" uuid="4a6ff819-36d4-40d0-aef5-a4ec5cc97fd2"/>
@@ -368,14 +218,14 @@
 							<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						</reportElement>
 						<textElement>
-							<font size="10" isBold="true"/>
+							<font size="10" isBold="false"/>
 						</textElement>
 						<text><![CDATA[Description :]]></text>
 					</staticText>
 					<textField>
 						<reportElement x="3" y="20" width="292" height="40" uuid="0fd09a89-c4c4-408f-afbf-1a6d0bf4cfd6"/>
 						<textElement>
-							<font size="8"/>
+							<font size="10" isBold="false"/>
 						</textElement>
 						<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentDescription()]]></textFieldExpression>
 					</textField>
@@ -396,7 +246,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<textElement>
-						<font size="10" isBold="true"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<text><![CDATA[For Related Inquiries please contact:]]></text>
 				</staticText>
@@ -405,7 +255,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{companyTitle}]]></textFieldExpression>
 				</textField>
@@ -414,7 +264,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{userSignedBy}.getFullName()]]></textFieldExpression>
 				</textField>
@@ -423,7 +273,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{userSignedBy}.getUserDetail().getDesignation()]]></textFieldExpression>
 				</textField>
@@ -432,7 +282,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA["/"]]></textFieldExpression>
 				</textField>
@@ -441,7 +291,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{companyParameters}.getOfficeAddress()]]></textFieldExpression>
 				</textField>
@@ -450,7 +300,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{companyParameters}.getOfficePhoneNumber()]]></textFieldExpression>
 				</textField>
@@ -459,7 +309,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{companyParameters}.getOfficeMobileNumber()]]></textFieldExpression>
 				</textField>
@@ -468,7 +318,7 @@
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{companyParameters}.getOfficeEmailAddress()]]></textFieldExpression>
 				</textField>
@@ -482,71 +332,50 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textField>
-					<reportElement x="51" y="-52" width="18" height="20" uuid="cb35c9a1-f1b2-4b12-9fb7-80b19eaa3ce9"/>
+					<reportElement x="3" y="-52" width="147" height="20" uuid="047bd12b-af4d-414f-8dc4-bc24da3edd4f"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getNoOfFilledContainers()]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement x="69" y="-52" width="11" height="20" uuid="4e9e227c-ca00-44f3-88f8-01d79490d1cb"/>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-					<text><![CDATA[X]]></text>
-				</staticText>
-				<textField>
-					<reportElement x="80" y="-52" width="70" height="20" uuid="047bd12b-af4d-414f-8dc4-bc24da3edd4f"/>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getUnit().getValue()]]></textFieldExpression>
+					<textFieldExpression><![CDATA["Volume: " + $P{order}.getOrderDetails().getNoOfFilledContainers()+ " X " + $P{order}.getOrderDetails().getUnit().getValue()]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="205" y="-51" width="40" height="20" uuid="bd45999d-c288-477a-af83-6365ce1f3c08"/>
+					<reportElement x="150" y="-52" width="145" height="20" uuid="40f69536-61d1-4562-8bad-5a4c82e08547"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getPackages()]]></textFieldExpression>
+					<textFieldExpression><![CDATA["Packages : " + $P{order}.getOrderDetails().getPackages() + " " + $P{order}.getOrderDetails().getPackagesUnit()]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="245" y="-51" width="50" height="20" uuid="40f69536-61d1-4562-8bad-5a4c82e08547"/>
+					<reportElement x="3" y="-23" width="145" height="20" uuid="3e267863-dd96-47eb-91f2-2f362f6e22c9"/>
 					<textElement>
-						<font size="8"/>
+						<font size="10" isBold="false"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getPackagesUnit()]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="79" y="-22" width="65" height="20" uuid="22bcefa1-812f-4ebf-8d14-30a56cb0dfe5"/>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-					<textFieldExpression><![CDATA["KGs"]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement x="54" y="-22" width="25" height="20" uuid="3e267863-dd96-47eb-91f2-2f362f6e22c9"/>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getWeight()]]></textFieldExpression>
+					<textFieldExpression><![CDATA["G. Weight : " + $P{order}.getOrderDetails().getWeight() + " " + $P{order}.getOrderDetails().getWeightUnit()]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="3" y="1" width="292" height="29" uuid="8b9f4ab0-8d33-42b2-8f46-95543018da27"/>
-					<textElement>
-						<font isBold="true"/>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="false"/>
 					</textElement>
-					<textFieldExpression><![CDATA["Delivery order/endorsement dispatch service charges are:\n" + $P{companyParameters}.getOrderDeliveryEndorsementRates()]]></textFieldExpression>
+					<textFieldExpression><![CDATA["Notification"]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="3" y="31" width="292" height="89" uuid="2453004a-b074-4cff-ab5d-09c0e1d1995f"/>
 					<textElement>
-						<font size="8" isBold="false"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Arrival advise is always based on Estimated Time of Arrival. Please keep in touch with us for firm confirmation. Please present the original/seaway Bill of Lading duly endorsed/discharged by the concerned authorities for collecting delivery order / endorsment. Please note endorsement/delivery order collect timing: " + $P{companyParameters}.getOrderTiming()]]></textFieldExpression>
 				</textField>
+				<textField>
+					<reportElement x="150" y="-23" width="145" height="20" uuid="666d9034-9ea5-49d6-8722-02a371c771cf"/>
+					<textElement>
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["CBM : " + $P{order}.getOrderDetails().getCbm()]]></textFieldExpression>
+				</textField>
 			</frame>
 			<frame>
-				<reportElement x="0" y="480" width="260" height="120" uuid="a719fb71-1eaf-4fc5-ba2a-11c7c22b9319">
+				<reportElement x="260" y="110" width="295" height="130" uuid="a719fb71-1eaf-4fc5-ba2a-11c7c22b9319">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -556,194 +385,103 @@
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textField>
-					<reportElement x="24" y="4" width="236" height="11" uuid="d9b21141-bc58-4225-a488-ecc0c5957022">
+					<reportElement x="0" y="17" width="295" height="11" uuid="d9b21141-bc58-4225-a488-ecc0c5957022">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<textElement>
-						<font size="6"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getContainerNo1()]]></textFieldExpression>
 				</textField>
-				<staticText>
-					<reportElement x="2" y="4" width="22" height="11" uuid="e6ba87ca-460b-4b7b-85b9-6e1e06270732">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="7"/>
-					</textElement>
-					<text><![CDATA[C#01]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="2" y="15" width="22" height="11" uuid="09f64c62-0a28-4e40-9669-62287e8ebb0c">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="7"/>
-					</textElement>
-					<text><![CDATA[C#02]]></text>
-				</staticText>
 				<textField>
-					<reportElement x="24" y="15" width="236" height="11" uuid="da21100e-5cdb-489c-84cb-a83c5854f0e6">
+					<reportElement x="0" y="28" width="295" height="11" uuid="da21100e-5cdb-489c-84cb-a83c5854f0e6">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<textElement>
-						<font size="6"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getContainerNo2()]]></textFieldExpression>
 				</textField>
-				<staticText>
-					<reportElement x="2" y="27" width="22" height="11" uuid="05f671f5-92ba-467a-aa4f-5134ed4e3365">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="7"/>
-					</textElement>
-					<text><![CDATA[C#03]]></text>
-				</staticText>
 				<textField>
-					<reportElement x="24" y="27" width="236" height="11" uuid="a1e31da1-ed9c-4953-9491-50aee5e1969e">
+					<reportElement x="0" y="40" width="295" height="11" uuid="a1e31da1-ed9c-4953-9491-50aee5e1969e">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<textElement>
-						<font size="6"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getContainerNo3()]]></textFieldExpression>
 				</textField>
-				<staticText>
-					<reportElement x="2" y="38" width="22" height="11" uuid="8701acb7-47aa-4072-a945-e184e2498f9f">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="7"/>
-					</textElement>
-					<text><![CDATA[C#04]]></text>
-				</staticText>
 				<textField>
-					<reportElement x="24" y="38" width="236" height="11" uuid="2e2e6f0c-77c9-4af6-984d-ecd8b45f95f4">
+					<reportElement x="0" y="51" width="295" height="11" uuid="2e2e6f0c-77c9-4af6-984d-ecd8b45f95f4">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<textElement>
-						<font size="6"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getContainerNo4()]]></textFieldExpression>
 				</textField>
-				<staticText>
-					<reportElement x="2" y="49" width="22" height="11" uuid="bdb67834-c26a-4399-b0af-1d40f97a5071">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="7"/>
-					</textElement>
-					<text><![CDATA[C#05]]></text>
-				</staticText>
 				<textField>
-					<reportElement x="24" y="49" width="236" height="11" uuid="2db4d4d8-9a8c-49de-947d-df16185b3c4b">
+					<reportElement x="0" y="62" width="295" height="11" uuid="2db4d4d8-9a8c-49de-947d-df16185b3c4b">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<textElement>
-						<font size="6"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getContainerNo5()]]></textFieldExpression>
 				</textField>
-				<staticText>
-					<reportElement x="2" y="60" width="22" height="11" uuid="cbf88deb-8438-4181-b054-2803e32b12b1">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="7"/>
-					</textElement>
-					<text><![CDATA[C#06]]></text>
-				</staticText>
 				<textField>
-					<reportElement x="24" y="60" width="236" height="11" uuid="e52cf048-de62-4554-8cd2-e4291d863543">
+					<reportElement x="0" y="73" width="295" height="11" uuid="e52cf048-de62-4554-8cd2-e4291d863543">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<textElement>
-						<font size="6"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getContainerNo6()]]></textFieldExpression>
 				</textField>
-				<staticText>
-					<reportElement x="2" y="71" width="22" height="11" uuid="5d641249-a68f-4b42-83dd-dc3e949ada4a">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="7"/>
-					</textElement>
-					<text><![CDATA[C#07]]></text>
-				</staticText>
 				<textField>
-					<reportElement x="24" y="71" width="236" height="11" uuid="260bb23c-ce6f-47ca-9814-19b85c1f3bda">
+					<reportElement x="0" y="84" width="295" height="11" uuid="260bb23c-ce6f-47ca-9814-19b85c1f3bda">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<textElement>
-						<font size="6"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getContainerNo7()]]></textFieldExpression>
 				</textField>
-				<staticText>
-					<reportElement x="2" y="82" width="22" height="11" uuid="9f278d6c-d8fc-483e-9d04-d31ea70c9fb1">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="7"/>
-					</textElement>
-					<text><![CDATA[C#08]]></text>
-				</staticText>
 				<textField>
-					<reportElement x="24" y="82" width="236" height="11" uuid="60f83ad5-a0d1-4eac-ba9a-df643c319f0d">
+					<reportElement x="0" y="95" width="295" height="11" uuid="60f83ad5-a0d1-4eac-ba9a-df643c319f0d">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<textElement>
-						<font size="6"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getContainerNo8()]]></textFieldExpression>
 				</textField>
-				<staticText>
-					<reportElement x="2" y="93" width="22" height="11" uuid="8d670f55-ad49-4cfd-bb89-f5a8b06813a8">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="7"/>
-					</textElement>
-					<text><![CDATA[C#09]]></text>
-				</staticText>
 				<textField>
-					<reportElement x="24" y="93" width="236" height="11" uuid="f2908bba-7aa6-431e-8601-6b52b28d553c">
+					<reportElement x="0" y="106" width="295" height="11" uuid="f2908bba-7aa6-431e-8601-6b52b28d553c">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<textElement>
-						<font size="6"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getContainerNo9()]]></textFieldExpression>
 				</textField>
-				<staticText>
-					<reportElement x="2" y="104" width="22" height="11" uuid="e7a85d78-c13f-464d-90d9-65121ced03cd">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					</reportElement>
-					<textElement>
-						<font size="7"/>
-					</textElement>
-					<text><![CDATA[C#10]]></text>
-				</staticText>
 				<textField>
-					<reportElement x="24" y="104" width="236" height="11" uuid="7645d2ed-fd5e-4da4-9158-9374e06791ac">
+					<reportElement x="0" y="117" width="295" height="11" uuid="7645d2ed-fd5e-4da4-9158-9374e06791ac">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<textElement>
-						<font size="6"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getContainerNo10()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="1" width="295" height="16" uuid="9eabf9f2-f576-4595-a17a-4df0abaeb356">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Container Details"]]></textFieldExpression>
 				</textField>
 			</frame>
 			<frame>
@@ -757,10 +495,21 @@
 				<textField>
 					<reportElement x="7" y="99" width="100" height="17" uuid="e7654fb4-1f1d-443a-ac95-f0f55a92af6e"/>
 					<textElement>
-						<font size="12" isBold="true"/>
+						<font size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA["E. & O. E."]]></textFieldExpression>
 				</textField>
+				<frame>
+					<reportElement x="-260" y="0" width="260" height="121" uuid="e1234a60-fab4-457c-b753-50ac07c9ec3d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+				</frame>
 			</frame>
 		</band>
 	</detail>

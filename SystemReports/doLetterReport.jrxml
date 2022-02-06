@@ -30,13 +30,6 @@
 	<pageHeader>
 		<band height="34">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-			<textField>
-				<reportElement x="360" y="0" width="195" height="30" uuid="147d432e-1737-4fc5-be14-8a8d8d2ee03b"/>
-				<textElement textAlignment="Right">
-					<font size="15" isBold="true" isItalic="true" isUnderline="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{reportTitle}]]></textFieldExpression>
-			</textField>
 		</band>
 	</pageHeader>
 	<columnHeader>
@@ -49,38 +42,37 @@
 				</textElement>
 				<text><![CDATA[Job No / Date:]]></text>
 			</staticText>
-			<textField pattern="MMMMM dd, yyyy">
-				<reportElement x="160" y="10" width="140" height="20" uuid="36bb0dab-9230-424d-a3a7-53049f2a13b3"/>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement x="0" y="35" width="80" height="20" uuid="8b97b410-09cf-41da-a684-2b2f5426d514"/>
 				<textElement>
-					<font isBold="true"/>
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[To,]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="80" y="35" width="375" height="15" uuid="624f70f5-925c-4f35-abb9-94cc0bdb00d1">
+				<reportElement x="80" y="35" width="475" height="15" uuid="624f70f5-925c-4f35-abb9-94cc0bdb00d1">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentForwarder().getFullName()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="80" y="50" width="375" height="15" uuid="50d6aae3-ae03-47aa-bdb9-7231b345f7b6">
+				<reportElement x="80" y="50" width="475" height="30" uuid="50d6aae3-ae03-47aa-bdb9-7231b345f7b6">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentForwarder().getCustomerAddress().getAddress()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="80" y="10" width="70" height="20" uuid="abb22408-77c6-4f63-a3c9-640445331e6e"/>
-				<textFieldExpression><![CDATA[$P{order}.getJobNumber()]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="150" y="10" width="10" height="20" uuid="15d418df-e15c-4c4a-a41d-88c9f225ef59">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textFieldExpression><![CDATA["/"]]></textFieldExpression>
+				<reportElement x="80" y="10" width="300" height="20" uuid="abb22408-77c6-4f63-a3c9-640445331e6e"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{order}.getJobNumber() + " / " + new java.util.Date()]]></textFieldExpression>
 			</textField>
 		</band>
 	</columnHeader>
@@ -121,64 +113,74 @@
 				<textField>
 					<reportElement x="0" y="0" width="120" height="20" uuid="e48a8b51-b4e9-4c3f-ab8e-05631e045900"/>
 					<textElement>
-						<font size="12"/>
+						<font size="10"/>
 					</textElement>
 					<textFieldExpression><![CDATA["House B/L Number"]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="160" y="0" width="130" height="20" uuid="f466239b-cc09-47fd-83da-c31777ce3369"/>
 					<textElement>
-						<font size="12"/>
+						<font size="10"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Number Of Packages"]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="305" y="0" width="250" height="20" uuid="8a885d7f-e50f-41e9-8aa6-77e2b7a6bab1"/>
 					<textElement>
-						<font size="12"/>
+						<font size="10"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Consignee"]]></textFieldExpression>
 				</textField>
 			</frame>
 			<textField>
-				<reportElement x="160" y="80" width="40" height="20" uuid="ed9cbc3d-f152-4439-94a8-7a26addb5695"/>
-				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getPackages()]]></textFieldExpression>
+				<reportElement x="160" y="81" width="120" height="20" uuid="ed9cbc3d-f152-4439-94a8-7a26addb5695"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getPackages() + " " + $P{order}.getOrderDetails().getPackagesUnit()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="200" y="80" width="80" height="20" uuid="8f393ac3-6401-4d9e-9a9f-556bbd586e78"/>
-				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getPackagesUnit()]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="305" y="80" width="250" height="20" uuid="2525495e-614c-4221-9e16-1d0cedff948d"/>
+				<reportElement x="305" y="81" width="250" height="20" uuid="2525495e-614c-4221-9e16-1d0cedff948d"/>
 				<textElement>
 					<font size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentConsignee().getFullName()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="305" y="100" width="250" height="44" uuid="1c279276-e27a-4794-88e8-f989f2560251"/>
+				<reportElement x="305" y="101" width="250" height="43" uuid="1c279276-e27a-4794-88e8-f989f2560251"/>
 				<textElement>
 					<font size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentConsignee().getCustomerAddress().getAddress()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="80" y="20" width="100" height="20" uuid="5cb7d3ec-6aba-498f-b5bf-6ec5cbd74439"/>
+				<reportElement x="80" y="20" width="475" height="20" uuid="5cb7d3ec-6aba-498f-b5bf-6ec5cbd74439"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getVessel()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="80" y="40" width="100" height="20" uuid="4616cd8f-2c9b-4891-9442-0b3cb9ba2c64"/>
+				<reportElement x="80" y="40" width="475" height="20" uuid="4616cd8f-2c9b-4891-9442-0b3cb9ba2c64"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getMblNumber()]]></textFieldExpression>
 			</textField>
 			<frame>
 				<reportElement x="0" y="144" width="555" height="75" uuid="d40577ab-f3d7-4845-a452-c9a89acf8a18"/>
 				<textField>
-					<reportElement x="0" y="0" width="305" height="75" uuid="8127e57c-e06f-4663-afa0-c62a790e5382"/>
-					<textFieldExpression><![CDATA["Please be note that “SEAWAY” MBL and “ORIGINAL” HBL are duly endorsed by us. You are requested to Please issue Delivery Order in favor of A.K. CORPORATION & oblige. Your co-operation in this regard will be highly appreciated. "]]></textFieldExpression>
+					<reportElement x="0" y="0" width="555" height="75" uuid="8127e57c-e06f-4663-afa0-c62a790e5382"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Please be note that “SEAWAY” MBL and “ORIGINAL” HBL are duly endorsed by us. " +
+"\nYou are requested to Please issue Delivery Order in favor of " + $P{order}.getClearingAgentName().getFullName() + " / " + $P{order}.getClearingAgentName().getAgentChallan() + " & oblige. "+
+"\nYour co-operation in this regard will be highly appreciated. "]]></textFieldExpression>
 				</textField>
 			</frame>
 			<frame>
-				<reportElement x="0" y="219" width="180" height="91" uuid="4fb573e9-4adf-4e2c-9bf8-50494869c4e1"/>
+				<reportElement x="0" y="219" width="180" height="106" uuid="4fb573e9-4adf-4e2c-9bf8-50494869c4e1"/>
 				<box>
 					<bottomPen lineWidth="1.0"/>
 				</box>
@@ -188,22 +190,38 @@
 				</image>
 			</frame>
 			<textField>
-				<reportElement x="0" y="314" width="178" height="15" uuid="d10e1981-9239-4806-9ef5-e7185550f2a2">
+				<reportElement x="0" y="327" width="555" height="15" uuid="d10e1981-9239-4806-9ef5-e7185550f2a2">
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{userSignedBy}.getFullName()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="329" width="179" height="15" uuid="d6a973c9-6b27-4f43-9529-22bdc440dfec">
+				<reportElement x="0" y="342" width="555" height="15" uuid="d6a973c9-6b27-4f43-9529-22bdc440dfec">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{userSignedBy}.getUserDetail().getDesignation()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="344" width="179" height="15" uuid="0d3415ce-296e-427c-a629-c8176a604bff">
+				<reportElement x="0" y="357" width="555" height="15" uuid="0d3415ce-296e-427c-a629-c8176a604bff">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
+				<textElement>
+					<font size="10"/>
+				</textElement>
 				<textFieldExpression><![CDATA["For " + $P{companyTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="81" width="160" height="20" uuid="ccfbdcb9-b2b8-4078-88a5-86d449f17065"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getHblNumber()]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

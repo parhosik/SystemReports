@@ -36,10 +36,6 @@
 				</textElement>
 				<text><![CDATA[Job No / Date:]]></text>
 			</staticText>
-			<textField pattern="MMMMM dd, yyyy">
-				<reportElement x="160" y="10" width="140" height="20" uuid="36bb0dab-9230-424d-a3a7-53049f2a13b3"/>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
 			<staticText>
 				<reportElement x="0" y="35" width="80" height="20" uuid="8b97b410-09cf-41da-a684-2b2f5426d514"/>
 				<textElement>
@@ -55,32 +51,26 @@
 				<text><![CDATA[Attention: Important Manifest Department]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="80" y="35" width="375" height="15" uuid="624f70f5-925c-4f35-abb9-94cc0bdb00d1">
+				<reportElement x="80" y="35" width="475" height="15" uuid="624f70f5-925c-4f35-abb9-94cc0bdb00d1">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentForwarder().getFullName()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="80" y="50" width="375" height="15" uuid="50d6aae3-ae03-47aa-bdb9-7231b345f7b6">
+				<reportElement x="80" y="50" width="475" height="15" uuid="50d6aae3-ae03-47aa-bdb9-7231b345f7b6">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentForwarder().getCustomerAddress().getAddress()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="80" y="10" width="70" height="20" uuid="abb22408-77c6-4f63-a3c9-640445331e6e"/>
-				<textFieldExpression><![CDATA[$P{order}.getJobNumber()]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="150" y="10" width="10" height="20" uuid="15d418df-e15c-4c4a-a41d-88c9f225ef59">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textFieldExpression><![CDATA["/"]]></textFieldExpression>
+				<reportElement x="80" y="10" width="400" height="20" uuid="abb22408-77c6-4f63-a3c9-640445331e6e"/>
+				<textFieldExpression><![CDATA[$P{order}.getJobNumber() + " / " + new SimpleDateFormat("dd-MM-yyyy HH:mm").format( new java.util.Date() )]]></textFieldExpression>
 			</textField>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="515" splitType="Stretch">
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 			<staticText>
 				<reportElement x="0" y="0" width="160" height="20" uuid="adc33926-91df-40c7-8da1-3a6a99f3a30f"/>
 				<text><![CDATA[Vessel ]]></text>
@@ -159,31 +149,31 @@
 				<textFieldExpression><![CDATA[":"]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="180" y="0" width="100" height="20" uuid="ca695c75-9cd1-4439-9086-e30794140707"/>
+				<reportElement x="180" y="0" width="375" height="20" uuid="ca695c75-9cd1-4439-9086-e30794140707"/>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getVessel()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="180" y="20" width="100" height="20" uuid="749da14f-83d9-4da5-96aa-fde2479ec9df"/>
+				<reportElement x="180" y="20" width="375" height="20" uuid="749da14f-83d9-4da5-96aa-fde2479ec9df"/>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getMblNumber()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="180" y="40" width="100" height="20" uuid="7f46b35a-bb88-483a-bcde-24bb49c54324"/>
+				<reportElement x="180" y="40" width="375" height="20" uuid="7f46b35a-bb88-483a-bcde-24bb49c54324"/>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getHblNumber()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="180" y="60" width="40" height="20" uuid="305f728b-39ee-4dc2-b7e7-a62e1d89261f"/>
-				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getPackages()]]></textFieldExpression>
+				<reportElement x="180" y="60" width="200" height="20" uuid="305f728b-39ee-4dc2-b7e7-a62e1d89261f"/>
+				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getPackages() + " " + $P{order}.getOrderDetails().getPackagesUnit()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="180" y="80" width="40" height="20" uuid="529be504-21c3-4af7-abfb-e92b689d6911"/>
-				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getWeight()]]></textFieldExpression>
+				<reportElement x="180" y="80" width="200" height="20" uuid="529be504-21c3-4af7-abfb-e92b689d6911"/>
+				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getWeight() + " " + $P{order}.getOrderDetails().getWeightUnit()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="180" y="100" width="40" height="20" uuid="e25a9191-5781-4a10-9502-2f9981630a74"/>
-				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getNoOfFilledContainers()]]></textFieldExpression>
+				<reportElement x="180" y="100" width="200" height="20" uuid="e25a9191-5781-4a10-9502-2f9981630a74"/>
+				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getNoOfFilledContainers() + " X " + $P{order}.getOrderDetails().getUnit().getValue()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="180" y="120" width="100" height="20" uuid="7a4f1ee4-04cb-4a4c-9046-fcecab36f743"/>
+				<reportElement x="180" y="120" width="200" height="20" uuid="7a4f1ee4-04cb-4a4c-9046-fcecab36f743"/>
 				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getUnit().getValue()]]></textFieldExpression>
 			</textField>
 			<frame>
@@ -248,7 +238,8 @@
 				</box>
 				<textField>
 					<reportElement x="10" y="0" width="170" height="100" uuid="241720d1-f246-45d8-8be9-ae8386c8912c"/>
-					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentConsignee().getCustomerAddress().getAddress()]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentConsignee().getFullName() + "\n\n" +
+$P{order}.getOrderDetails().getShipmentConsignee().getCustomerAddress().getAddress()]]></textFieldExpression>
 				</textField>
 			</frame>
 			<frame>
@@ -261,7 +252,8 @@
 				</box>
 				<textField>
 					<reportElement x="10" y="0" width="190" height="100" uuid="18539572-43eb-4724-86f6-c89af04ec8a9"/>
-					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentShipper().getCustomerAddress().getAddress()]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentShipper().getFullName() + "\n\n" +
+$P{order}.getOrderDetails().getShipmentShipper().getCustomerAddress().getAddress()]]></textFieldExpression>
 				</textField>
 			</frame>
 			<frame>
@@ -290,41 +282,25 @@ Thanking You,]]></text>
 						<bottomPen lineWidth="1.0"/>
 					</box>
 					<image scaleImage="FillFrame">
-						<reportElement x="0" y="0" width="90" height="63" uuid="f9e047a2-0edc-400a-93b1-5640ea03152e"/>
+						<reportElement x="11" y="0" width="79" height="60" uuid="f9e047a2-0edc-400a-93b1-5640ea03152e"/>
 						<imageExpression><![CDATA[$P{stamppath}]]></imageExpression>
 					</image>
 				</frame>
 			</frame>
 			<textField>
-				<reportElement x="220" y="60" width="80" height="20" uuid="d33b671e-182e-4e19-a825-9bc1fc699623"/>
-				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getPackagesUnit()]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="220" y="80" width="80" height="20" uuid="3ab4befe-0f37-4bcc-b31b-3e400487143e"/>
-				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getWeightUnit()]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="230" y="100" width="70" height="20" uuid="64fe4d80-9912-4df9-92ab-2ec16555a249"/>
-				<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getUnit().getValue()]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="220" y="100" width="10" height="20" uuid="1ccfcf95-749b-4d31-b1b2-337972b57e87"/>
-				<text><![CDATA[X]]></text>
-			</staticText>
-			<textField>
-				<reportElement x="1" y="463" width="178" height="15" uuid="265b9479-6fa5-4c63-bdd5-d38770bd0524">
+				<reportElement x="1" y="465" width="178" height="15" uuid="265b9479-6fa5-4c63-bdd5-d38770bd0524">
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$P{userSignedBy}.getFullName()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="478" width="179" height="15" uuid="269aae4c-4e33-49a0-99fb-094ce859ff1f">
+				<reportElement x="1" y="480" width="179" height="15" uuid="269aae4c-4e33-49a0-99fb-094ce859ff1f">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$P{userSignedBy}.getUserDetail().getDesignation()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="493" width="179" height="15" uuid="db857659-1cc1-4907-9717-d9730c0c3473">
+				<reportElement x="1" y="495" width="179" height="15" uuid="db857659-1cc1-4907-9717-d9730c0c3473">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textFieldExpression><![CDATA["For " + $P{companyTitle}]]></textFieldExpression>
