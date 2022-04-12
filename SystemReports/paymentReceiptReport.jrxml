@@ -14,6 +14,8 @@
 	<parameter name="companyTitle" class="java.lang.String"/>
 	<parameter name="footerlogopath" class="java.lang.String"/>
 	<parameter name="companyParameters" class="com.logistics.entities.parameters.Parameters"/>
+	<parameter name="allAmountPaid" class="java.lang.Double"/>
+	<parameter name="allAmountPaidInWords" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -162,6 +164,10 @@
 					<reportElement x="1" y="0" width="139" height="20" uuid="8fcc2260-1a03-4198-bb0b-f42a3cd8d6c5"/>
 					<textFieldExpression><![CDATA["Received with thanks from: "]]></textFieldExpression>
 				</textField>
+				<textField>
+					<reportElement x="140" y="0" width="415" height="20" uuid="5a34a714-a14d-4fc7-9b14-7f03280ad3ab"/>
+					<textFieldExpression><![CDATA[$P{order}.getOrderDetails().getShipmentConsignee().getFullName()]]></textFieldExpression>
+				</textField>
 			</frame>
 			<frame>
 				<reportElement x="0" y="80" width="555" height="20" uuid="4c3ca9b6-f91c-425d-b0ce-f4fe5192aa1f"/>
@@ -169,12 +175,20 @@
 					<reportElement x="1" y="0" width="139" height="20" uuid="f08796bf-9e58-4320-948d-23d0fc6c0bbb"/>
 					<textFieldExpression><![CDATA["The sum of amount is: "]]></textFieldExpression>
 				</textField>
+				<textField>
+					<reportElement x="140" y="0" width="415" height="20" uuid="16c35674-8b0d-481e-b275-52a940445c50"/>
+					<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format( $P{allAmountPaid} )]]></textFieldExpression>
+				</textField>
 			</frame>
 			<frame>
 				<reportElement x="0" y="100" width="555" height="20" uuid="3675c307-0d69-4306-8f0c-31a1b160da83"/>
 				<textField>
 					<reportElement x="1" y="0" width="139" height="20" uuid="e552099d-ccbd-41ba-bd2f-edb35f79dec8"/>
 					<textFieldExpression><![CDATA["Amount in figures : "]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="140" y="0" width="415" height="20" uuid="35bc25d2-1811-4f68-9043-b0a06335fd8f"/>
+					<textFieldExpression><![CDATA[$P{allAmountPaidInWords}]]></textFieldExpression>
 				</textField>
 			</frame>
 			<frame>
